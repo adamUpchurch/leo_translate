@@ -9,10 +9,9 @@ websites = "[.](com|net|org|io|gov)"
 
 def splitThis(text):
     text = " " + text + "  "
-    text = text.replace('"',"'")
-    text = text.replace('“',"'")
-    text = text.replace('”',"'")
-    text = text.replace("\n"," ")
+    text = text.replace('"',"")
+    text = text.replace('“',"")
+    text = text.replace('”',"")
     text = text.replace("previous | Table of Contents | next", "")
     text = re.sub(prefixes,"\\1<prd>",text)
     text = re.sub(websites,"<prd>\\1",text)
@@ -35,6 +34,7 @@ def splitThis(text):
     sentences = text.split("<stop>")
     sentences = sentences[:-1]
     sentences = [s.strip() for s in sentences]
+#     sentences = [s.encode('utf-8') for s in sentences]
     return sentences
 
 

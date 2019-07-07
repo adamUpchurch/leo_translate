@@ -11,7 +11,7 @@ def splitting():
   data = json.loads(request.data.decode('utf-8'))
   return split_this(data)
 
-@app.route('/translate')
+@app.route('/translate', methods=['POST'])
 def translating():
   data = json.loads(request.data.decode('utf-8'))
   return translate_this(data)

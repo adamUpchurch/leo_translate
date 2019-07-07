@@ -4,10 +4,10 @@ import json
 
 
 def split_this(req):
-  print(req)
-  print(type(req))
+
   if 'text_to_split' in req:
     text = req['text_to_split']
+    print(text)
     split = splitBook.splitThis(text)
     print(split)
     return jsonify(split)
@@ -15,12 +15,14 @@ def split_this(req):
     return 'There is no text in header: text_to_split'
     
 def translate_this(req):
+  print(req)
+  print(type(req))
   if 'text_to_translate' in req:
-    text = req['text_to_translate']
-    newText = text[1:-1].split(',')
+    text_array = req['text_to_translate']
+    # newText = text[1:-1].split(',')
     text_to_translate = []
 
-    for text in newText:
+    for text in text_array:
       clean_text = text.strip()
       text_to_translate.append(clean_text[1:-1])
 
