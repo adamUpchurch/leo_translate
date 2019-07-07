@@ -24,7 +24,12 @@ def translate_this(req):
 
     for text in text_array:
       clean_text = text.strip()
-      text_to_translate.append(clean_text[1:-1])
+      clean_text = clean_text.replace('&quot;','"')
+      clean_text = clean_text.replace('&apos;',"'")
+      clean_text = clean_text.replace('&#x27;',"'")
+      clean_text = clean_text.replace('&#x27;','"')
+      text_to_translate.append(clean_text)
+      # text_to_translate.append(clean_text[1:-1])
 
     translated_text = translate.this_text(text_to_translate)
     print(translated_text)

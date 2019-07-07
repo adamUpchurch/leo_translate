@@ -13,7 +13,9 @@ def splitting():
 
 @app.route('/translate', methods=['POST'])
 def translating():
-  data = json.loads(request.data.decode('utf-8'))
+  # I guess there isn't a point of decoding the text...?
+  # data_decoded = json.loads(request.data.decode('utf-8'))
+  data = json.loads(request.data)
   return translate_this(data)
 
 # incomes = [
