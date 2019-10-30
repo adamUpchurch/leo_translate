@@ -1,64 +1,49 @@
 from flask import Flask, request, render_template, jsonify
-from controller import splitBook, translate
+# from controller import splitBook, translate
 import json
-from controller.textProcessing import split_this, translate_this
+# from controller.textProcessing import split_this, translate_this
+from textblob import TextBlob
+from controller.translate import translate_this
+from controller.textProcessing import clean_this, shorten_this, flatten_this, saveBook
+import time
 
 app = Flask(__name__)
 
-@app.route('/split', methods=['POST'])
-def splitting():
-  print('==============================')
+@app.route('/traducir', methods=['POST'])
+def traducir():
   data = json.loads(request.data.decode('utf-8'))
-  return split_this(data)
+  tb = TextBlob(data['story'])
+  book = data["book"]
+  text_splat = []
+  text_translated = []
+  for blob in tb.sentences:
+    sentence = shorten_this(blob.string)
+    flattened = flatten_this(sentence)
+    for sent in flattened:
+      time.sleep(.5)
+      try:
+        text_splat.append(sent)
+        # text_translated.append(TextBlob(sent).translate(to='es').string)
+      except:
+        try:
+          time.sleep(5)
+          text_splat.append(sent)
+          text_translated.append(translate_this(sent))  
+        except:
+          saveBook(book['title'], book['summary'], book['author'], book['cover'], text_splat, text_translated, book['_id'])
+          dataToReturn = {
+            "en": text_splat,
+            "es": text_translated
+          }
+          return jsonify(dataToReturn)
+        
+      # try:
+      #   text_translated.append(TextBlob(sent).translate(to='es').string)
+      # except:
 
-@app.route('/translate', methods=['POST'])
-def translating():
-  # I guess there isn't a point of decoding the text...?
-  # data_decoded = json.loads(request.data.decode('utf-8'))
-  data = json.loads(request.data)
-  return translate_this(data)
-
-# incomes = [
-#   { 'description': 'salary', 'amount': 5000 }
-# ]
-
-# @app.route('/split')
-# def split():
-#   split = splitBook.splitThis(text)
-#   print(split)
-#   return jsonify(split)
-
-# @app.route('/translate')
-# def translateThis():
-#   if 'text_to_translate' in request.headers:
-#     text = request.headers['text_to_translate']
-#     newText = text[1:-1].split(',')
-#     text_to_translate = []
-
-#     for text in newText:
-#       clean_text = text.strip()
-#       text_to_translate.append(clean_text[1:-1])
-
-#     translated_text = translate.this_text(text_to_translate)
-#     print(translated_text)
-#     return translated_text
-#   else:
-#     return translate.this_text(['Your request needs headers.'])
-#   return jsonify(text_to_translate)
-    
-
-# @app.route('/income', methods=['POST'])
-# def add_income():
-#   incomes.append(request.get_json())
-#   return '', 204
-
-# @app.route('/<city>')
-# def hello_nashville(city):
-#     return 'Hello, %s!' % city.capitalize()
-
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     if request.method == 'POST':
-#         return 'Logging in'
-#     else:
-#         return 'Login / Signup'
+  dataToReturn = {
+    "en": text_splat,
+    "es": text_translated
+  }
+  saveBook(book['title'], book['summary'], book['author'], book['cover'], text_splat, text_translated, book['_id'])
+  return jsonify(dataToReturn)

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "leo-ios-244300",
+  "private_key_id": "ca148207825703940584cb98b499d746ebb995c4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDXGMPnRj7bWNnO\nRh76w1Uggnc8aX5fqDqTuvbfpgL+Nw81dYYPliRI+k42cOCDzfB5k106MTMIOm/8\ncHCYXvgiTUqnPcdrbDeagAlI+ym9cUZfJUYSwhopy6UtIiJGtLp+qVLlovjBkvVg\ndy3ac0hVnDVn1k4SWqzc1xB5rqt6DTX6fdDJ1yghE3mB7GLflTRq3M9EokuHTZyp\nblbOO3JD9JCJ9e+xj1KTP4qcuuR65ndNYlSLHTW9IYCkMtoinzmgyGcIH8x+kQjn\ngb3n58Esz+VKpFcOp5QiKtRLpWvhSeRih858I6Z93noJkouijnRyvhglLlgZ+AWr\nbonHfeHfAgMBAAECggEATc39fvjf38QB9SVUK2zgrAPFUarvNXbKyYlFp5yLVJ1h\n+Ppr5dNviJ5SEEtASy0BIVj2zgfh58YLoAqkD9m6c931dQ1Zxze73T0XHrkLXiVN\nSTlYYYyonhm1w9+m+mCBXTOucrZCuPKJo704bt5oed8pSkgwsV7vTGrW4M0X5eub\nqF+XTdGYlgiQxnAbSByeuT/8zsAcgiv2mQ+9CYE78V7gH1uMC4Dz172BIIz9LRSj\nnMyswy+MeNREQfCRGSgZ65zVwHgFhiPzI2GciC6I/0m9oSDDy0nbz/oEmM6oI1dn\nVdlGppy1KPUo2CsQJaICP7fbIOkLG/O41IriYYO7QQKBgQDsOb3/Ne+UZOnXC3Hn\n9GGD1Tja2PzESSOG3COLzmnYqejMUC3w+VmvbfLh0Fc5/J1vEiBMyUQ9CkIXBPwe\nwmWv1OiflDEPo5nvHm1UXXg3ssQ4qLWtV6q7JnxXcDbLPq5wOUyA3SdPzryyeDi/\nVVhWfSjFmyjwpr/5lyEujXF2TwKBgQDpGjzPKkf21IjDwYWKkyt+wnLMHF9STaUe\nwQVayORweQkYBegYj5g9IZz+hRfnSmi6+1i8A83ftLNXU4acg/TS3X1oUlQj1Rim\naqrMp+I7FAfc+xsUc3nzzzwkZ6HY9ml9kHEDBegalKvK1hkQ0wI9eT41e0+iylX+\nupvw8GuHcQKBgHjt/nP+Go3vMz6hX0iNdLZWm2p9lritcICDhbb2jn0aTlD54urv\n25fRQ3uSenT2+2l28A4fIs3UyIycQq1Ee2YOKqA27v7Ak/czrmh4CSkKXSVcSNVa\ngc6ZHyJsEcDub8KHssBtdsiGX1dF8FcSy8xK+mpeyhCYbMLLOXNpeWJFAoGAKfLw\n0o9XWBIzcpcXAzMs9qjjo9vPQ655cqll30qb4anGey5E8HaW/RlZeWxWOudnJY8q\nDtvYZtPMGoELjosoufHmKan3PmORBhHYHvBvhBY8vAXsf6ewYLIArsR/md3uagxe\nah7cADyVFfGlnSN8GbgB+/nvAOrMwwSuH5QEpeECgYBo4rVXVrHk18gEnjfxRpZi\ngRPFDfZCwMWaf4WnoPalpZOCyZpvoQgLEqbpxHkT252vHh0xkKOKVn2vvgGeJaBc\nUHrDO5h7jVa5Oo0iLIwCdBBu8xEv11d0yp2OiMRx8rJe2DTD66tnH2UvLYYWzobF\nvGxviPDEB9QpDxALnlHp5w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "translate@leo-ios-244300.iam.gserviceaccount.com",
+  "client_id": "105119206845576000210",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/translate%40leo-ios-244300.iam.gserviceaccount.com"
+}
