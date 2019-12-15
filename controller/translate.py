@@ -16,10 +16,12 @@ def translate_this(text, source_language='en-us', target_language='es-ES', locat
         target_language_code=target_language)
     translations = []
     for translation in response.translations:
-        print(translation.translated_text)
         translations.append(translation.translated_text)
-
-    return translations[0]
+    print('Translated this:', translations)
+    if source_language == 'en-us':
+        return translations[0]
+    if source_language == 'es-ES':
+        return translations
 
 if __name__ == '__main__':
     translate_this(['Hello, my name is Adam.', 'Hello, my name is Adam.', 'Hello, my name is Adam.', 'Hello, my name is Adam.', 'Hello, my name is Adam.', 'Hello, my name is Adam.'])
