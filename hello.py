@@ -59,7 +59,7 @@ def traducir():
         word4word_translations.append(literal_translations)
       except:
         try:
-          time.sleep(5)
+          time.sleep(20)
           text_splat.append(sent)
           text_translated.append(translate_this(sent))
         except:
